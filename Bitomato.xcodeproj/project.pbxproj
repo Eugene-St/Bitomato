@@ -42,6 +42,8 @@
 		582193FB2DDB5D7000FB3EC7 /* MockMainSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193FA2DDB5D6C00FB3EC7 /* MockMainSceneViewModel.swift */; };
 		582193FE2DDB816B00FB3EC7 /* MarketSortFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193FD2DDB816800FB3EC7 /* MarketSortFields.swift */; };
 		582194002DDB822500FB3EC7 /* MarketListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193FF2DDB822100FB3EC7 /* MarketListHeaderView.swift */; };
+		582194022DDB877C00FB3EC7 /* MarketWebsocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582194012DDB877500FB3EC7 /* MarketWebsocketService.swift */; };
+		582194042DDB87BC00FB3EC7 /* MarketWebSocketUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582194032DDB87B800FB3EC7 /* MarketWebSocketUpdate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		582193FA2DDB5D6C00FB3EC7 /* MockMainSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainSceneViewModel.swift; sourceTree = "<group>"; };
 		582193FD2DDB816800FB3EC7 /* MarketSortFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSortFields.swift; sourceTree = "<group>"; };
 		582193FF2DDB822100FB3EC7 /* MarketListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListHeaderView.swift; sourceTree = "<group>"; };
+		582194012DDB877500FB3EC7 /* MarketWebsocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketWebsocketService.swift; sourceTree = "<group>"; };
+		582194032DDB87B800FB3EC7 /* MarketWebSocketUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketWebSocketUpdate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -273,6 +277,7 @@
 		582193722DDB10D000FB3EC7 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				582194032DDB87B800FB3EC7 /* MarketWebSocketUpdate.swift */,
 				582193E22DDB1A6200FB3EC7 /* MarketResponse.swift */,
 			);
 			path = DTOs;
@@ -356,6 +361,7 @@
 		582193DF2DDB1A3000FB3EC7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				582194012DDB877500FB3EC7 /* MarketWebsocketService.swift */,
 				582193E02DDB1A3400FB3EC7 /* NetworkService.swift */,
 			);
 			path = Services;
@@ -554,6 +560,7 @@
 				5821935B2DDB0CD900FB3EC7 /* AppCoordinator.swift in Sources */,
 				582193F42DDB370F00FB3EC7 /* MarketListView.swift in Sources */,
 				582193592DDB0CCA00FB3EC7 /* BaseCoordinator.swift in Sources */,
+				582194042DDB87BC00FB3EC7 /* MarketWebSocketUpdate.swift in Sources */,
 				5821937E2DDB116300FB3EC7 /* MainCoordinatorView.swift in Sources */,
 				582193772DDB110A00FB3EC7 /* Routes.swift in Sources */,
 				582193E92DDB20E500FB3EC7 /* APIRoute.swift in Sources */,
@@ -569,6 +576,7 @@
 				582193FB2DDB5D7000FB3EC7 /* MockMainSceneViewModel.swift in Sources */,
 				582193F02DDB36E900FB3EC7 /* MarketRowView.swift in Sources */,
 				582193EE2DDB36C500FB3EC7 /* MarketMapper.swift in Sources */,
+				582194022DDB877C00FB3EC7 /* MarketWebsocketService.swift in Sources */,
 				582193E62DDB1C8F00FB3EC7 /* MarketDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

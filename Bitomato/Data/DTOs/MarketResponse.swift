@@ -31,12 +31,12 @@ struct Currency: Decodable {
     let moneyIcon: String?
     let stockLabel: String
     let moneyLabel: String
-    let price: String
+    var price: String
     let priceUsd: String
     let high: String
-    let change: String
+    var change: String
     let low: String
-    let volume: String
+    var volume: String
     let deal: String
     let priority: Int
     let minAmount: String

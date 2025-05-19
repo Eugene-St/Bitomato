@@ -34,6 +34,7 @@ struct MainSceneView<ViewModel: MainSceneViewModelProtocol>: View {
             )
             .padding(.top, 4)
             .padding(.bottom, 12)
+            .padding(.horizontal, 6)
 
             ScrollView(showsIndicators: true) {
                 VStack(spacing: 0) {

@@ -19,6 +19,8 @@ final class MainDIContainer {
     
     // MARK: - Private
     private func makeMainViewModel(navigator: MainNavigation) -> MainSceneViewModel {
-        .init(navigator: navigator, marketManager: MarketDataManagerImpl(service: networkService))
+        .init(navigator: navigator,
+              marketManager: MarketDataManagerImpl(service: networkService),
+              webSocketService: MarketWebSocketService())
     }
 }

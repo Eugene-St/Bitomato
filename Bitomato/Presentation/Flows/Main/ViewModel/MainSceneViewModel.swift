@@ -29,16 +29,22 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
     
     @Published var sortField: MarketSortField = .volume
     @Published var sortDirection: SortDirection = .descending
-
+    
+    private var webSocketService: MarketWebSocketServiceProtocol
+    private var cancellables = Set<AnyCancellable>()
+    private var pendingUpdates: [String: MarketUpdatePayload] = [:]
     private var allCurrencies: [String: Currency] = [:]
     private var tabs: Tabs?
-
     private let marketManager: MarketDataManagerProtocol
     private weak var navigator: MainNavigation?
-
-    init(navigator: MainNavigation, marketManager: MarketDataManagerProtocol) {
+    
+    init(navigator: MainNavigation,
+         marketManager: MarketDataManagerProtocol,
+         webSocketService: MarketWebSocketServiceProtocol) {
         self.navigator = navigator
         self.marketManager = marketManager
+        self.webSocketService = webSocketService
+        setupWebSocketUpdates()
     }
 
     @MainActor
@@ -48,6 +54,8 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
 
         do {
             let result = try await marketManager.fetchMarketsInfo()
+            let marketIds = Array(result.response.currencies.keys)
+            webSocketService.connect(to: marketIds)
             allCurrencies = result.response.currencies
             tabs = result.response.tabs
             selectedTag = currentTags.first
@@ -84,6 +92,7 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
         displayMarkets = sort(markets: filtered)
     }
 
+    // MARK: - Private Helpers
     private func sort(markets: [MarketDisplayModel]) -> [MarketDisplayModel] {
         guard sortDirection != .none else {
             return markets.sorted(by: { MarketMapper.parseVolume($0.volume) > MarketMapper.parseVolume($1.volume) })
@@ -111,6 +120,62 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
             }
         }
     }
+    
+    private func setupWebSocketUpdates() {        
+        webSocketService.onMessage
+            .sink { [weak self] update in
+                guard let self = self else { return }
+                guard update.method == "state.update" else { return }
+                guard let params = update.params else {
+                    self.errorMessage = "Invalid params in WebSocket update: \(update)"
+                    return
+                }
+
+                self.pendingUpdates[params.symbol] = params.payload
+            }
+            .store(in: &cancellables)
+
+        webSocketService.onError
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] errorMessage in
+                self?.errorMessage = errorMessage
+            }
+            .store(in: &cancellables)
+
+        Timer.publish(every: 3.0, on: .main, in: .common)
+            .autoconnect()
+            .sink { [weak self] _ in self?.applyWebSocketUpdates() }
+            .store(in: &cancellables)
+    }
+    
+    private func applyWebSocketUpdates() {
+        for (key, update) in pendingUpdates {
+            guard var currency = allCurrencies[key] else { continue }
+
+            if let last = update.last {
+                currency.price = last
+            }
+
+            if let volume = update.volume {
+                currency.volume = volume
+            }
+
+            if let change = update.change {
+                currency.change = change
+            } else if let openStr = update.open,
+                      let lastStr = update.last,
+                      let open = Double(openStr),
+                      let last = Double(lastStr),
+                      open != 0 {
+                let calculated = ((last - open) / open) * 100
+                let change = String(format: "%.2f", calculated)
+                currency.change = change
+            }
+            allCurrencies[key] = currency
+        }
+        pendingUpdates.removeAll()
+        applyFilter()
+    }
 
     func toggleSort(by field: MarketSortField) {
         if sortField == field {
@@ -121,8 +186,6 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
         }
         applyFilter()
     }
-
-
 
     var tabsList: [String] {
         guard let tabs = tabs else { return [] }
