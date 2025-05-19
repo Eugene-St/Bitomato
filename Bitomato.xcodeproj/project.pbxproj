@@ -37,6 +37,11 @@
 		582193F02DDB36E900FB3EC7 /* MarketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193EF2DDB36E600FB3EC7 /* MarketRowView.swift */; };
 		582193F22DDB36FB00FB3EC7 /* MarketChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193F12DDB36F700FB3EC7 /* MarketChangeView.swift */; };
 		582193F42DDB370F00FB3EC7 /* MarketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193F32DDB370C00FB3EC7 /* MarketListView.swift */; };
+		582193F62DDB475100FB3EC7 /* TabPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193F52DDB474B00FB3EC7 /* TabPickerView.swift */; };
+		582193F82DDB476A00FB3EC7 /* TagPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193F72DDB476700FB3EC7 /* TagPickerView.swift */; };
+		582193FB2DDB5D7000FB3EC7 /* MockMainSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193FA2DDB5D6C00FB3EC7 /* MockMainSceneViewModel.swift */; };
+		582193FE2DDB816B00FB3EC7 /* MarketSortFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193FD2DDB816800FB3EC7 /* MarketSortFields.swift */; };
+		582194002DDB822500FB3EC7 /* MarketListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193FF2DDB822100FB3EC7 /* MarketListHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,11 @@
 		582193EF2DDB36E600FB3EC7 /* MarketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowView.swift; sourceTree = "<group>"; };
 		582193F12DDB36F700FB3EC7 /* MarketChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketChangeView.swift; sourceTree = "<group>"; };
 		582193F32DDB370C00FB3EC7 /* MarketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListView.swift; sourceTree = "<group>"; };
+		582193F52DDB474B00FB3EC7 /* TabPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPickerView.swift; sourceTree = "<group>"; };
+		582193F72DDB476700FB3EC7 /* TagPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPickerView.swift; sourceTree = "<group>"; };
+		582193FA2DDB5D6C00FB3EC7 /* MockMainSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainSceneViewModel.swift; sourceTree = "<group>"; };
+		582193FD2DDB816800FB3EC7 /* MarketSortFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSortFields.swift; sourceTree = "<group>"; };
+		582193FF2DDB822100FB3EC7 /* MarketListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -279,6 +289,7 @@
 		582193742DDB10FA00FB3EC7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				582193FC2DDB815000FB3EC7 /* Enums */,
 				582193752DDB110200FB3EC7 /* Navigation */,
 			);
 			path = Shared;
@@ -303,6 +314,7 @@
 		582193792DDB112A00FB3EC7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				582193F92DDB5D5F00FB3EC7 /* Mock */,
 				5821937C2DDB115600FB3EC7 /* Coordinator */,
 				5821937B2DDB114C00FB3EC7 /* ViewModel */,
 				5821937A2DDB114100FB3EC7 /* Scene */,
@@ -313,6 +325,9 @@
 		5821937A2DDB114100FB3EC7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				582193FF2DDB822100FB3EC7 /* MarketListHeaderView.swift */,
+				582193F72DDB476700FB3EC7 /* TagPickerView.swift */,
+				582193F52DDB474B00FB3EC7 /* TabPickerView.swift */,
 				582193F32DDB370C00FB3EC7 /* MarketListView.swift */,
 				582193F12DDB36F700FB3EC7 /* MarketChangeView.swift */,
 				582193EF2DDB36E600FB3EC7 /* MarketRowView.swift */,
@@ -361,6 +376,22 @@
 				582193E82DDB20E300FB3EC7 /* APIRoute.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		582193F92DDB5D5F00FB3EC7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				582193FA2DDB5D6C00FB3EC7 /* MockMainSceneViewModel.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		582193FC2DDB815000FB3EC7 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				582193FD2DDB816800FB3EC7 /* MarketSortFields.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +540,8 @@
 			files = (
 				5821936E2DDB103C00FB3EC7 /* MainNavigation.swift in Sources */,
 				5821935D2DDB0CEB00FB3EC7 /* AppCoordinatorView.swift in Sources */,
+				582193F62DDB475100FB3EC7 /* TabPickerView.swift in Sources */,
+				582193F82DDB476A00FB3EC7 /* TagPickerView.swift in Sources */,
 				582193692DDB100F00FB3EC7 /* NetworkMonitor.swift in Sources */,
 				5821936C2DDB102E00FB3EC7 /* Coordinator.swift in Sources */,
 				582193712DDB105C00FB3EC7 /* AppConstants.swift in Sources */,
@@ -530,7 +563,10 @@
 				582193662DDB0D7500FB3EC7 /* MainDIContainer.swift in Sources */,
 				582193552DDB0CA400FB3EC7 /* AppEntry.swift in Sources */,
 				582193EB2DDB20ED00FB3EC7 /* HTTPMethod.swift in Sources */,
+				582194002DDB822500FB3EC7 /* MarketListHeaderView.swift in Sources */,
 				5821935F2DDB0D0100FB3EC7 /* CoordinatorFactory.swift in Sources */,
+				582193FE2DDB816B00FB3EC7 /* MarketSortFields.swift in Sources */,
+				582193FB2DDB5D7000FB3EC7 /* MockMainSceneViewModel.swift in Sources */,
 				582193F02DDB36E900FB3EC7 /* MarketRowView.swift in Sources */,
 				582193EE2DDB36C500FB3EC7 /* MarketMapper.swift in Sources */,
 				582193E62DDB1C8F00FB3EC7 /* MarketDataManager.swift in Sources */,

@@ -13,22 +13,27 @@ struct MarketMapper {
         }.sorted(by: { $0.pair < $1.pair })
     }
     
-    private static func formatLargeNumber(_ value: String) -> String {
+    static func formatLargeNumber(_ value: String) -> String {
         guard let double = Double(value) else { return value }
         return String(format: "%.12f", double)
     }
     
-    private static func formatUsd(_ value: String) -> String {
+    static func formatUsd(_ value: String) -> String {
         guard let double = Double(value) else { return value }
         return String(format: "%.2f", double)
     }
     
-    private static func formatVolume(_ value: String) -> String {
+    static func formatVolume(_ value: String) -> String {
         guard let double = Double(value) else { return value }
         if double > 1_000_000 {
             return "\(String(format: "%.2f", double / 1_000_000))M"
         }
         return String(format: "%.2f", double)
+    }
+    
+    static func parseVolume(_ volume: String) -> Double {
+        let cleaned = volume.replacingOccurrences(of: "Vol ", with: "").replacingOccurrences(of: "M", with: "")
+        return Double(cleaned) ?? 0
     }
 }
 
