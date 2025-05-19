@@ -6,7 +6,7 @@ struct MarketListHeaderView: View {
     let onSort: (MarketSortField) -> Void
 
     var body: some View {
-        HStack {
+        HStack(spacing: 20) {
             sortButton(title: "Name", field: .name)
             sortButton(title: "Vol", field: .volume)
             Spacer()
@@ -19,12 +19,20 @@ struct MarketListHeaderView: View {
     }
 
     private func sortButton(title: String, field: MarketSortField) -> some View {
-        Button(action: { onSort(field) }) {
+        Button(action: {
+            onSort(field)
+        }) {
             HStack(spacing: 4) {
                 Text(title)
-                if currentSort == field {
-                    Image(systemName: direction == .ascending ? "arrow.up" : direction == .descending ? "arrow.down" : "")
-                        .font(.system(size: 10, weight: .bold))
+
+                VStack(spacing: 1) {
+                    Image(systemName: "chevron.up")
+                        .font(.system(size: 8, weight: .bold))
+                        .foregroundColor(currentSort == field && direction == .ascending ? .interfaceBlack : .gray)
+
+                    Image(systemName: "chevron.down")
+                        .font(.system(size: 8, weight: .bold))
+                        .foregroundColor(currentSort == field && direction == .descending ? .interfaceBlack : .gray)
                 }
             }
         }
@@ -33,8 +41,10 @@ struct MarketListHeaderView: View {
 
 #Preview {
     MarketListHeaderView(
-        currentSort: .name,
-        direction: .descending,
+        currentSort: .volume,
+        direction: .ascending,
         onSort: { _ in }
     )
+    .padding()
+    .background(Color.white)
 }
