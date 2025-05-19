@@ -3,15 +3,13 @@ import SwiftData
 
 final class MainDIContainer {
     private let navigator: MainNavigation
-//    private let localDataSource: ExchangeRateLocalDataSource
-//    private let remoteDataSource: ExchangeRateRemoteDataSource
+    private let networkService: NetworkServiceProtocol
     private let networkMonitor: NetworkMonitor
     
     init(navigator: MainNavigation,
          networkMonitor: NetworkMonitor) {
         self.navigator = navigator
-//        self.localDataSource = ExchangeRateLocalDataSourceImpl(context: modelContext)
-//        self.remoteDataSource = ExchangeRateRemoteDataSourceImpl()
+        self.networkService = NetworkService()
         self.networkMonitor = networkMonitor
     }
     
@@ -21,6 +19,6 @@ final class MainDIContainer {
     
     // MARK: - Private
     private func makeMainViewModel(navigator: MainNavigation) -> MainSceneViewModel {
-        .init(navigator: navigator)
+        .init(navigator: navigator, marketManager: MarketDataManagerImpl(service: networkService))
     }
 }
