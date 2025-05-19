@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		582193282DDB0C0A00FB3EC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5821930F2DDB0C0900FB3EC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 582193162DDB0C0900FB3EC7;
+			remoteInfo = Bitomato;
+		};
+		582193322DDB0C0A00FB3EC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5821930F2DDB0C0900FB3EC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 582193162DDB0C0900FB3EC7;
+			remoteInfo = Bitomato;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		582193172DDB0C0900FB3EC7 /* Bitomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		582193272DDB0C0A00FB3EC7 /* BitomatoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitomatoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		582193312DDB0C0A00FB3EC7 /* BitomatoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitomatoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		582193192DDB0C0900FB3EC7 /* Bitomato */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Bitomato;
+			sourceTree = "<group>";
+		};
+		5821932A2DDB0C0A00FB3EC7 /* BitomatoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BitomatoTests;
+			sourceTree = "<group>";
+		};
+		582193342DDB0C0A00FB3EC7 /* BitomatoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BitomatoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		582193142DDB0C0900FB3EC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582193242DDB0C0A00FB3EC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5821932E2DDB0C0A00FB3EC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5821930E2DDB0C0900FB3EC7 = {
+			isa = PBXGroup;
+			children = (
+				582193192DDB0C0900FB3EC7 /* Bitomato */,
+				5821932A2DDB0C0A00FB3EC7 /* BitomatoTests */,
+				582193342DDB0C0A00FB3EC7 /* BitomatoUITests */,
+				582193182DDB0C0900FB3EC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		582193182DDB0C0900FB3EC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				582193172DDB0C0900FB3EC7 /* Bitomato.app */,
+				582193272DDB0C0A00FB3EC7 /* BitomatoTests.xctest */,
+				582193312DDB0C0A00FB3EC7 /* BitomatoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		582193162DDB0C0900FB3EC7 /* Bitomato */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5821933B2DDB0C0A00FB3EC7 /* Build configuration list for PBXNativeTarget "Bitomato" */;
+			buildPhases = (
+				582193132DDB0C0900FB3EC7 /* Sources */,
+				582193142DDB0C0900FB3EC7 /* Frameworks */,
+				582193152DDB0C0900FB3EC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				582193192DDB0C0900FB3EC7 /* Bitomato */,
+			);
+			name = Bitomato;
+			packageProductDependencies = (
+			);
+			productName = Bitomato;
+			productReference = 582193172DDB0C0900FB3EC7 /* Bitomato.app */;
+			productType = "com.apple.product-type.application";
+		};
+		582193262DDB0C0A00FB3EC7 /* BitomatoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5821933E2DDB0C0A00FB3EC7 /* Build configuration list for PBXNativeTarget "BitomatoTests" */;
+			buildPhases = (
+				582193232DDB0C0A00FB3EC7 /* Sources */,
+				582193242DDB0C0A00FB3EC7 /* Frameworks */,
+				582193252DDB0C0A00FB3EC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				582193292DDB0C0A00FB3EC7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5821932A2DDB0C0A00FB3EC7 /* BitomatoTests */,
+			);
+			name = BitomatoTests;
+			packageProductDependencies = (
+			);
+			productName = BitomatoTests;
+			productReference = 582193272DDB0C0A00FB3EC7 /* BitomatoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		582193302DDB0C0A00FB3EC7 /* BitomatoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 582193412DDB0C0A00FB3EC7 /* Build configuration list for PBXNativeTarget "BitomatoUITests" */;
+			buildPhases = (
+				5821932D2DDB0C0A00FB3EC7 /* Sources */,
+				5821932E2DDB0C0A00FB3EC7 /* Frameworks */,
+				5821932F2DDB0C0A00FB3EC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				582193332DDB0C0A00FB3EC7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				582193342DDB0C0A00FB3EC7 /* BitomatoUITests */,
+			);
+			name = BitomatoUITests;
+			packageProductDependencies = (
+			);
+			productName = BitomatoUITests;
+			productReference = 582193312DDB0C0A00FB3EC7 /* BitomatoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5821930F2DDB0C0900FB3EC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					582193162DDB0C0900FB3EC7 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					582193262DDB0C0A00FB3EC7 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 582193162DDB0C0900FB3EC7;
+					};
+					582193302DDB0C0A00FB3EC7 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 582193162DDB0C0900FB3EC7;
+					};
+				};
+			};
+			buildConfigurationList = 582193122DDB0C0900FB3EC7 /* Build configuration list for PBXProject "Bitomato" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5821930E2DDB0C0900FB3EC7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 582193182DDB0C0900FB3EC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				582193162DDB0C0900FB3EC7 /* Bitomato */,
+				582193262DDB0C0A00FB3EC7 /* BitomatoTests */,
+				582193302DDB0C0A00FB3EC7 /* BitomatoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		582193152DDB0C0900FB3EC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582193252DDB0C0A00FB3EC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5821932F2DDB0C0A00FB3EC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		582193132DDB0C0900FB3EC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582193232DDB0C0A00FB3EC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5821932D2DDB0C0A00FB3EC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		582193292DDB0C0A00FB3EC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 582193162DDB0C0900FB3EC7 /* Bitomato */;
+			targetProxy = 582193282DDB0C0A00FB3EC7 /* PBXContainerItemProxy */;
+		};
+		582193332DDB0C0A00FB3EC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 582193162DDB0C0900FB3EC7 /* Bitomato */;
+			targetProxy = 582193322DDB0C0A00FB3EC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		582193392DDB0C0A00FB3EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5821933A2DDB0C0A00FB3EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5821933C2DDB0C0A00FB3EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bitomato/Preview Content\"";
+				DEVELOPMENT_TEAM = 52V4MFL2L9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitomato.Bitomato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5821933D2DDB0C0A00FB3EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bitomato/Preview Content\"";
+				DEVELOPMENT_TEAM = 52V4MFL2L9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitomato.Bitomato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5821933F2DDB0C0A00FB3EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52V4MFL2L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitomato.BitomatoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitomato.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bitomato";
+			};
+			name = Debug;
+		};
+		582193402DDB0C0A00FB3EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52V4MFL2L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitomato.BitomatoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitomato.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bitomato";
+			};
+			name = Release;
+		};
+		582193422DDB0C0A00FB3EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52V4MFL2L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitomato.BitomatoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bitomato;
+			};
+			name = Debug;
+		};
+		582193432DDB0C0A00FB3EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52V4MFL2L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitomato.BitomatoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bitomato;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		582193122DDB0C0900FB3EC7 /* Build configuration list for PBXProject "Bitomato" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582193392DDB0C0A00FB3EC7 /* Debug */,
+				5821933A2DDB0C0A00FB3EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5821933B2DDB0C0A00FB3EC7 /* Build configuration list for PBXNativeTarget "Bitomato" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5821933C2DDB0C0A00FB3EC7 /* Debug */,
+				5821933D2DDB0C0A00FB3EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5821933E2DDB0C0A00FB3EC7 /* Build configuration list for PBXNativeTarget "BitomatoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5821933F2DDB0C0A00FB3EC7 /* Debug */,
+				582193402DDB0C0A00FB3EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		582193412DDB0C0A00FB3EC7 /* Build configuration list for PBXNativeTarget "BitomatoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582193422DDB0C0A00FB3EC7 /* Debug */,
+				582193432DDB0C0A00FB3EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5821930F2DDB0C0900FB3EC7 /* Project object */;
+}
