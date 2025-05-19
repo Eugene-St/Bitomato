@@ -1,36 +1,100 @@
-//
-//  BitomatoTests.swift
-//  BitomatoTests
-//
-//  Created by Eugene St on 19.05.2025.
-//
-
 import XCTest
+import Combine
 @testable import Bitomato
 
-final class BitomatoTests: XCTestCase {
+final class MainSceneViewModelTests: XCTestCase {
+    
+    private var cancellables: Set<AnyCancellable> = []
+    
+    func testFetchSetsInitialState() async {
+        let mockManager = MockMarketDataManager()
+        let mockSocket = MockWebSocketService()
+        let viewModel = MainSceneViewModel(
+            navigator: MainCoordinator(),
+            marketManager: mockManager,
+            webSocketService: mockSocket
+        )
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        await viewModel.fetch()
+
+        XCTAssertFalse(viewModel.isLoading)
+        XCTAssertEqual(viewModel.displayMarkets.count, 1)
+        XCTAssertEqual(viewModel.tabsList, ["BTC"])
+        XCTAssertEqual(viewModel.currentTags, ["USDT"])
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func testApplyWebSocketUpdatesUpdatesCurrency() {
+        let mockManager = MockMarketDataManager()
+        let mockSocket = MockWebSocketService()
+        let viewModel = MainSceneViewModel(navigator: MainCoordinator(), marketManager: mockManager, webSocketService: mockSocket)
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        Task {
+            await viewModel.fetch()
+            viewModel.pendingUpdates = [
+                "BTC_USDT": MarketUpdatePayload(
+                    period: 86400,
+                    last: "50000.0",
+                    open: "48000.0",
+                    close: nil,
+                    high: nil,
+                    low: nil,
+                    volume: "100000000",
+                    deal: nil,
+                    change: nil
+                )
+            ]
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+            viewModel.applyWebSocketUpdates()
+
+            let updated = viewModel.displayMarkets.first(where: { $0.id == "BTC_USDT" })
+            if let price = Double(updated?.price ?? "") {
+                XCTAssertEqual(price, 50000.0, accuracy: 0.01)
+            } else {
+                XCTFail("Failed to convert price to Double")
+            }
+            if let change = Double(updated?.change ?? "") {
+                XCTAssertEqual(change, 4.17, accuracy: 0.01)
+            } else {
+                XCTFail("Failed to convert change to Double")
+            }
         }
     }
 
+    func testToggleSortChangesSortDirection() async {
+        let mockManager = MockMarketDataManager()
+        let mockSocket = MockWebSocketService()
+        let viewModel = MainSceneViewModel(
+            navigator: MainCoordinator(),
+            marketManager: mockManager,
+            webSocketService: mockSocket
+        )
+
+        await viewModel.fetch()
+        
+        viewModel.sortField = .volume
+        viewModel.sortDirection = .ascending
+        let initial = viewModel.sortDirection
+
+        viewModel.toggleSort(by: .volume)
+
+        XCTAssertNotEqual(viewModel.sortDirection, initial)
+    }
+
+    func testSelectTabAndTagUpdatesMarkets() async {
+        let mockManager = MockMarketDataManager()
+        let mockSocket = MockWebSocketService()
+        let viewModel = MainSceneViewModel(
+            navigator: MainCoordinator(),
+            marketManager: mockManager,
+            webSocketService: mockSocket
+        )
+
+        await viewModel.fetch()
+        viewModel.selectTab("BTC")
+        viewModel.selectTag("USDT")
+
+        XCTAssertEqual(viewModel.selectedTab, "BTC")
+        XCTAssertEqual(viewModel.selectedTag, "USDT")
+        XCTAssertGreaterThan(viewModel.displayMarkets.count, 0)
+    }
 }

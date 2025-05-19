@@ -32,7 +32,7 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
     
     private var webSocketService: MarketWebSocketServiceProtocol
     private var cancellables = Set<AnyCancellable>()
-    private var pendingUpdates: [String: MarketUpdatePayload] = [:]
+    var pendingUpdates: [String: MarketUpdatePayload] = [:]
     private var allCurrencies: [String: Currency] = [:]
     private var tabs: Tabs?
     private let marketManager: MarketDataManagerProtocol
@@ -148,7 +148,7 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
             .store(in: &cancellables)
     }
     
-    private func applyWebSocketUpdates() {
+    func applyWebSocketUpdates() {
         for (key, update) in pendingUpdates {
             guard var currency = allCurrencies[key] else { continue }
 
