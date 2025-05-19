@@ -6,6 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5821934A2DDB0C1E00FB3EC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582193442DDB0C1E00FB3EC7 /* Preview Assets.xcassets */; };
+		5821934B2DDB0C1E00FB3EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582193462DDB0C1E00FB3EC7 /* Assets.xcassets */; };
+		582193552DDB0CA400FB3EC7 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193542DDB0CA400FB3EC7 /* AppEntry.swift */; };
+		582193572DDB0CB800FB3EC7 /* AppRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193562DDB0CB700FB3EC7 /* AppRoot.swift */; };
+		582193592DDB0CCA00FB3EC7 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193582DDB0CC900FB3EC7 /* BaseCoordinator.swift */; };
+		5821935B2DDB0CD900FB3EC7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821935A2DDB0CD900FB3EC7 /* AppCoordinator.swift */; };
+		5821935D2DDB0CEB00FB3EC7 /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821935C2DDB0CEB00FB3EC7 /* AppCoordinatorView.swift */; };
+		5821935F2DDB0D0100FB3EC7 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821935E2DDB0D0100FB3EC7 /* CoordinatorFactory.swift */; };
+		582193612DDB0D0F00FB3EC7 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193602DDB0D0F00FB3EC7 /* AppFlow.swift */; };
+		582193642DDB0D6A00FB3EC7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193632DDB0D6900FB3EC7 /* AppDIContainer.swift */; };
+		582193662DDB0D7500FB3EC7 /* MainDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193652DDB0D7500FB3EC7 /* MainDIContainer.swift */; };
+		582193692DDB100F00FB3EC7 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193682DDB100E00FB3EC7 /* NetworkMonitor.swift */; };
+		5821936C2DDB102E00FB3EC7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821936B2DDB102D00FB3EC7 /* Coordinator.swift */; };
+		5821936E2DDB103C00FB3EC7 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821936D2DDB103B00FB3EC7 /* MainNavigation.swift */; };
+		582193712DDB105C00FB3EC7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193702DDB105300FB3EC7 /* AppConstants.swift */; };
+		582193772DDB110A00FB3EC7 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193762DDB110900FB3EC7 /* Routes.swift */; };
+		5821937E2DDB116300FB3EC7 /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821937D2DDB116200FB3EC7 /* MainCoordinatorView.swift */; };
+		582193802DDB117000FB3EC7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821937F2DDB116F00FB3EC7 /* MainCoordinator.swift */; };
+		582193822DDB11C600FB3EC7 /* MainSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193812DDB11C500FB3EC7 /* MainSceneViewModel.swift */; };
+		582193842DDB11DE00FB3EC7 /* MainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582193832DDB11DC00FB3EC7 /* MainSceneView.swift */; };
+		582193862DDB13D900FB3EC7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582193852DDB13D900FB3EC7 /* Launch Screen.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		582193282DDB0C0A00FB3EC7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +51,30 @@
 		582193172DDB0C0900FB3EC7 /* Bitomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		582193272DDB0C0A00FB3EC7 /* BitomatoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitomatoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		582193312DDB0C0A00FB3EC7 /* BitomatoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitomatoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		582193442DDB0C1E00FB3EC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		582193462DDB0C1E00FB3EC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		582193542DDB0CA400FB3EC7 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
+		582193562DDB0CB700FB3EC7 /* AppRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot.swift; sourceTree = "<group>"; };
+		582193582DDB0CC900FB3EC7 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		5821935A2DDB0CD900FB3EC7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5821935C2DDB0CEB00FB3EC7 /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		5821935E2DDB0D0100FB3EC7 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		582193602DDB0D0F00FB3EC7 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		582193632DDB0D6900FB3EC7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		582193652DDB0D7500FB3EC7 /* MainDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDIContainer.swift; sourceTree = "<group>"; };
+		582193682DDB100E00FB3EC7 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		5821936B2DDB102D00FB3EC7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		5821936D2DDB103B00FB3EC7 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
+		582193702DDB105300FB3EC7 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		582193762DDB110900FB3EC7 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		5821937D2DDB116200FB3EC7 /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
+		5821937F2DDB116F00FB3EC7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		582193812DDB11C500FB3EC7 /* MainSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneViewModel.swift; sourceTree = "<group>"; };
+		582193832DDB11DC00FB3EC7 /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
+		582193852DDB13D900FB3EC7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Bitomato/Resources/Launch Screen.storyboard"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		582193192DDB0C0900FB3EC7 /* Bitomato */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Bitomato;
-			sourceTree = "<group>";
-		};
 		5821932A2DDB0C0A00FB3EC7 /* BitomatoTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BitomatoTests;
@@ -75,7 +115,7 @@
 		5821930E2DDB0C0900FB3EC7 = {
 			isa = PBXGroup;
 			children = (
-				582193192DDB0C0900FB3EC7 /* Bitomato */,
+				582193492DDB0C1E00FB3EC7 /* Bitomato */,
 				5821932A2DDB0C0A00FB3EC7 /* BitomatoTests */,
 				582193342DDB0C0A00FB3EC7 /* BitomatoUITests */,
 				582193182DDB0C0900FB3EC7 /* Products */,
@@ -92,6 +132,186 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		582193492DDB0C1E00FB3EC7 /* Bitomato */ = {
+			isa = PBXGroup;
+			children = (
+				5821934E2DDB0C4300FB3EC7 /* App */,
+				5821934F2DDB0C4800FB3EC7 /* Domain */,
+				582193532DDB0C6600FB3EC7 /* Data */,
+				582193522DDB0C5F00FB3EC7 /* Presentation */,
+				582193512DDB0C5900FB3EC7 /* Core */,
+				582193502DDB0C5200FB3EC7 /* Resources */,
+			);
+			path = Bitomato;
+			sourceTree = "<group>";
+		};
+		5821934E2DDB0C4300FB3EC7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				582193542DDB0CA400FB3EC7 /* AppEntry.swift */,
+				582193562DDB0CB700FB3EC7 /* AppRoot.swift */,
+				582193582DDB0CC900FB3EC7 /* BaseCoordinator.swift */,
+				5821935A2DDB0CD900FB3EC7 /* AppCoordinator.swift */,
+				5821935C2DDB0CEB00FB3EC7 /* AppCoordinatorView.swift */,
+				5821935E2DDB0D0100FB3EC7 /* CoordinatorFactory.swift */,
+				582193602DDB0D0F00FB3EC7 /* AppFlow.swift */,
+				582193622DDB0D5F00FB3EC7 /* DI */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5821934F2DDB0C4800FB3EC7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		582193502DDB0C5200FB3EC7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				582193852DDB13D900FB3EC7 /* Launch Screen.storyboard */,
+				582193442DDB0C1E00FB3EC7 /* Preview Assets.xcassets */,
+				582193462DDB0C1E00FB3EC7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		582193512DDB0C5900FB3EC7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5821936F2DDB104F00FB3EC7 /* Constants */,
+				5821936A2DDB102900FB3EC7 /* Protocols */,
+				582193672DDB100200FB3EC7 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		582193522DDB0C5F00FB3EC7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				582193782DDB112700FB3EC7 /* Flows */,
+				582193742DDB10FA00FB3EC7 /* Shared */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		582193532DDB0C6600FB3EC7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				582193732DDB10DA00FB3EC7 /* Mappers */,
+				582193722DDB10D000FB3EC7 /* DTOs */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		582193622DDB0D5F00FB3EC7 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				582193652DDB0D7500FB3EC7 /* MainDIContainer.swift */,
+				582193632DDB0D6900FB3EC7 /* AppDIContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		582193672DDB100200FB3EC7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				582193682DDB100E00FB3EC7 /* NetworkMonitor.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5821936A2DDB102900FB3EC7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5821936D2DDB103B00FB3EC7 /* MainNavigation.swift */,
+				5821936B2DDB102D00FB3EC7 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5821936F2DDB104F00FB3EC7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				582193702DDB105300FB3EC7 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		582193722DDB10D000FB3EC7 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		582193732DDB10DA00FB3EC7 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		582193742DDB10FA00FB3EC7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				582193752DDB110200FB3EC7 /* Navigation */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		582193752DDB110200FB3EC7 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				582193762DDB110900FB3EC7 /* Routes.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		582193782DDB112700FB3EC7 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				582193792DDB112A00FB3EC7 /* Main */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		582193792DDB112A00FB3EC7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5821937C2DDB115600FB3EC7 /* Coordinator */,
+				5821937B2DDB114C00FB3EC7 /* ViewModel */,
+				5821937A2DDB114100FB3EC7 /* Scene */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5821937A2DDB114100FB3EC7 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				582193832DDB11DC00FB3EC7 /* MainSceneView.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		5821937B2DDB114C00FB3EC7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				582193812DDB11C500FB3EC7 /* MainSceneViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5821937C2DDB115600FB3EC7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5821937F2DDB116F00FB3EC7 /* MainCoordinator.swift */,
+				5821937D2DDB116200FB3EC7 /* MainCoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +326,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				582193192DDB0C0900FB3EC7 /* Bitomato */,
 			);
 			name = Bitomato;
 			packageProductDependencies = (
@@ -212,6 +429,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582193862DDB13D900FB3EC7 /* Launch Screen.storyboard in Resources */,
+				5821934A2DDB0C1E00FB3EC7 /* Preview Assets.xcassets in Resources */,
+				5821934B2DDB0C1E00FB3EC7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +456,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5821936E2DDB103C00FB3EC7 /* MainNavigation.swift in Sources */,
+				5821935D2DDB0CEB00FB3EC7 /* AppCoordinatorView.swift in Sources */,
+				582193692DDB100F00FB3EC7 /* NetworkMonitor.swift in Sources */,
+				5821936C2DDB102E00FB3EC7 /* Coordinator.swift in Sources */,
+				582193712DDB105C00FB3EC7 /* AppConstants.swift in Sources */,
+				582193822DDB11C600FB3EC7 /* MainSceneViewModel.swift in Sources */,
+				582193612DDB0D0F00FB3EC7 /* AppFlow.swift in Sources */,
+				582193642DDB0D6A00FB3EC7 /* AppDIContainer.swift in Sources */,
+				582193842DDB11DE00FB3EC7 /* MainSceneView.swift in Sources */,
+				582193802DDB117000FB3EC7 /* MainCoordinator.swift in Sources */,
+				5821935B2DDB0CD900FB3EC7 /* AppCoordinator.swift in Sources */,
+				582193592DDB0CCA00FB3EC7 /* BaseCoordinator.swift in Sources */,
+				5821937E2DDB116300FB3EC7 /* MainCoordinatorView.swift in Sources */,
+				582193772DDB110A00FB3EC7 /* Routes.swift in Sources */,
+				582193572DDB0CB800FB3EC7 /* AppRoot.swift in Sources */,
+				582193662DDB0D7500FB3EC7 /* MainDIContainer.swift in Sources */,
+				582193552DDB0CA400FB3EC7 /* AppEntry.swift in Sources */,
+				5821935F2DDB0D0100FB3EC7 /* CoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,15 +633,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Bitomato/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bitomato/Resources\"";
 				DEVELOPMENT_TEAM = 52V4MFL2L9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,9 +651,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitomato.Bitomato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -424,15 +668,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Bitomato/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bitomato/Resources\"";
 				DEVELOPMENT_TEAM = 52V4MFL2L9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,9 +686,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitomato.Bitomato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

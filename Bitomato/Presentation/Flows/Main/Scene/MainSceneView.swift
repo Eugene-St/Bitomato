@@ -1,24 +1,17 @@
-//
-//  ContentView.swift
-//  Bitomato
-//
-//  Created by Eugene St on 19.05.2025.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct MainSceneView<ViewModel: MainSceneViewModelProtocol>: View {
+    
+    // MARK: - Properties
+    @ObservedObject var viewModel: ViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Bitomato!")
         }
         .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }
