@@ -45,6 +45,36 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
         self.marketManager = marketManager
         self.webSocketService = webSocketService
         setupWebSocketUpdates()
+        NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)
+            .sink { [weak self] _ in
+                self?.reconnectWebSocket()
+            }
+            .store(in: &cancellables)
+
+    }
+    
+    var tabsList: [String] {
+        guard let tabs = tabs else { return [] }
+
+        return Mirror(reflecting: tabs)
+            .children
+            .compactMap { label, value in
+                if let array = value as? [String], !array.isEmpty { return label?.uppercased() }
+                if let string = value as? String, !string.isEmpty { return label?.uppercased() }
+                return nil
+            }
+    }
+
+    var currentTags: [String] {
+        guard let tabs = tabs else { return [] }
+        switch selectedTab {
+        case "USDS": return tabs.USDs ?? []
+        case "BTC": return tabs.BTC.map { [$0] } ?? []
+        case "DEFI": return tabs.DeFi ?? []
+        case "OTHER": return tabs.OTHER ?? []
+        case "ALTS": return tabs.ALTS ?? []
+        default: return []
+        }
     }
 
     @MainActor
@@ -65,6 +95,57 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
         }
     }
     
+    func applyWebSocketUpdates() {
+        for (key, update) in pendingUpdates {
+            guard var currency = allCurrencies[key] else { continue }
+
+            if let last = update.last {
+                currency.price = last
+            }
+
+            if let volume = update.volume {
+                currency.volume = volume
+            }
+
+            if let change = update.change {
+                currency.change = change
+            } else if let openStr = update.open,
+                      let lastStr = update.last,
+                      let open = Double(openStr),
+                      let last = Double(lastStr),
+                      open != 0 {
+                let calculated = ((last - open) / open) * 100
+                let change = String(format: "%.2f", calculated)
+                currency.change = change
+            }
+            allCurrencies[key] = currency
+        }
+        pendingUpdates.removeAll()
+        applyFilter()
+    }
+    
+    func toggleSort(by field: MarketSortField) {
+        if sortField == field {
+            sortDirection.toggle()
+        } else {
+            sortField = field
+            sortDirection = .descending
+        }
+        applyFilter()
+    }
+    
+    func selectTab(_ tab: String) {
+        selectedTab = tab
+        selectedTag = currentTags.first
+        applyFilter()
+    }
+
+    func selectTag(_ tag: String) {
+        selectedTag = tag
+        applyFilter()
+    }
+
+    // MARK: - Private Helpers
     private func applyFilter() {
         guard let selectedTag = selectedTag else {
             displayMarkets = []
@@ -91,8 +172,15 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
 
         displayMarkets = sort(markets: filtered)
     }
+    
+    private func reconnectWebSocket() {
+        webSocketService.disconnect()
+        let marketIds = Array(allCurrencies.keys)
+        if !marketIds.isEmpty {
+            webSocketService.connect(to: marketIds)
+        }
+    }
 
-    // MARK: - Private Helpers
     private func sort(markets: [MarketDisplayModel]) -> [MarketDisplayModel] {
         guard sortDirection != .none else {
             return markets.sorted(by: { MarketMapper.parseVolume($0.volume) > MarketMapper.parseVolume($1.volume) })
@@ -139,6 +227,7 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] errorMessage in
                 self?.errorMessage = errorMessage
+                self?.reconnectWebSocket()
             }
             .store(in: &cancellables)
 
@@ -146,79 +235,5 @@ final class MainSceneViewModel: MainSceneViewModelProtocol {
             .autoconnect()
             .sink { [weak self] _ in self?.applyWebSocketUpdates() }
             .store(in: &cancellables)
-    }
-    
-    func applyWebSocketUpdates() {
-        for (key, update) in pendingUpdates {
-            guard var currency = allCurrencies[key] else { continue }
-
-            if let last = update.last {
-                currency.price = last
-            }
-
-            if let volume = update.volume {
-                currency.volume = volume
-            }
-
-            if let change = update.change {
-                currency.change = change
-            } else if let openStr = update.open,
-                      let lastStr = update.last,
-                      let open = Double(openStr),
-                      let last = Double(lastStr),
-                      open != 0 {
-                let calculated = ((last - open) / open) * 100
-                let change = String(format: "%.2f", calculated)
-                currency.change = change
-            }
-            allCurrencies[key] = currency
-        }
-        pendingUpdates.removeAll()
-        applyFilter()
-    }
-
-    func toggleSort(by field: MarketSortField) {
-        if sortField == field {
-            sortDirection.toggle()
-        } else {
-            sortField = field
-            sortDirection = .descending
-        }
-        applyFilter()
-    }
-
-    var tabsList: [String] {
-        guard let tabs = tabs else { return [] }
-
-        return Mirror(reflecting: tabs)
-            .children
-            .compactMap { label, value in
-                if let array = value as? [String], !array.isEmpty { return label?.uppercased() }
-                if let string = value as? String, !string.isEmpty { return label?.uppercased() }
-                return nil
-            }
-    }
-
-    var currentTags: [String] {
-        guard let tabs = tabs else { return [] }
-        switch selectedTab {
-        case "USDS": return tabs.USDs ?? []
-        case "BTC": return tabs.BTC.map { [$0] } ?? []
-        case "DEFI": return tabs.DeFi ?? []
-        case "OTHER": return tabs.OTHER ?? []
-        case "ALTS": return tabs.ALTS ?? []
-        default: return []
-        }
-    }
-
-    func selectTab(_ tab: String) {
-        selectedTab = tab
-        selectedTag = currentTags.first
-        applyFilter()
-    }
-
-    func selectTag(_ tag: String) {
-        selectedTag = tag
-        applyFilter()
     }
 }

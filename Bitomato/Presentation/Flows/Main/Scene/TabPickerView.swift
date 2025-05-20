@@ -31,3 +31,12 @@ struct TabPickerView: View {
     }
 }
 
+#Preview {
+    StatefulPreviewWrapper("BTC") { selectedTab in
+        TabPickerView(
+            tabs: ["USD", "BTC", "ALTS", "DEFI"],
+            selected: selectedTab.wrappedValue,
+            onSelect: { selectedTab.wrappedValue = $0 }
+        )
+    }
+}

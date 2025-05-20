@@ -46,6 +46,8 @@
 		582194042DDB87BC00FB3EC7 /* MarketWebSocketUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582194032DDB87B800FB3EC7 /* MarketWebSocketUpdate.swift */; };
 		582194062DDB9E6D00FB3EC7 /* MockMarketDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582194052DDB9E6600FB3EC7 /* MockMarketDataManager.swift */; };
 		582194082DDB9E8100FB3EC7 /* MockWebsocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582194072DDB9E7C00FB3EC7 /* MockWebsocketService.swift */; };
+		5821940C2DDC5A1200FB3EC7 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821940B2DDC5A0E00FB3EC7 /* String+Extension.swift */; };
+		5821940F2DDC5D1C00FB3EC7 /* PreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5821940E2DDC5D1800FB3EC7 /* PreviewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		582194032DDB87B800FB3EC7 /* MarketWebSocketUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketWebSocketUpdate.swift; sourceTree = "<group>"; };
 		582194052DDB9E6600FB3EC7 /* MockMarketDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMarketDataManager.swift; sourceTree = "<group>"; };
 		582194072DDB9E7C00FB3EC7 /* MockWebsocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebsocketService.swift; sourceTree = "<group>"; };
+		5821940B2DDC5A0E00FB3EC7 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		5821940E2DDC5D1800FB3EC7 /* PreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -216,6 +220,7 @@
 		582193512DDB0C5900FB3EC7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				582194092DDC59FD00FB3EC7 /* Extensions */,
 				5821936F2DDB104F00FB3EC7 /* Constants */,
 				5821936A2DDB102900FB3EC7 /* Protocols */,
 				582193672DDB100200FB3EC7 /* Network */,
@@ -298,6 +303,7 @@
 		582193742DDB10FA00FB3EC7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5821940D2DDC5D1100FB3EC7 /* PreviewHelper */,
 				582193FC2DDB815000FB3EC7 /* Enums */,
 				582193752DDB110200FB3EC7 /* Navigation */,
 			);
@@ -404,6 +410,30 @@
 				582193FD2DDB816800FB3EC7 /* MarketSortFields.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		582194092DDC59FD00FB3EC7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5821940A2DDC5A0800FB3EC7 /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5821940A2DDC5A0800FB3EC7 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				5821940B2DDC5A0E00FB3EC7 /* String+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5821940D2DDC5D1100FB3EC7 /* PreviewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				5821940E2DDC5D1800FB3EC7 /* PreviewHelper.swift */,
+			);
+			path = PreviewHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,6 +586,7 @@
 				582193F82DDB476A00FB3EC7 /* TagPickerView.swift in Sources */,
 				582193692DDB100F00FB3EC7 /* NetworkMonitor.swift in Sources */,
 				5821936C2DDB102E00FB3EC7 /* Coordinator.swift in Sources */,
+				5821940F2DDC5D1C00FB3EC7 /* PreviewHelper.swift in Sources */,
 				582193712DDB105C00FB3EC7 /* AppConstants.swift in Sources */,
 				582194082DDB9E8100FB3EC7 /* MockWebsocketService.swift in Sources */,
 				582193822DDB11C600FB3EC7 /* MainSceneViewModel.swift in Sources */,
@@ -584,6 +615,7 @@
 				582193FB2DDB5D7000FB3EC7 /* MockMainSceneViewModel.swift in Sources */,
 				582193F02DDB36E900FB3EC7 /* MarketRowView.swift in Sources */,
 				582193EE2DDB36C500FB3EC7 /* MarketMapper.swift in Sources */,
+				5821940C2DDC5A1200FB3EC7 /* String+Extension.swift in Sources */,
 				582194022DDB877C00FB3EC7 /* MarketWebsocketService.swift in Sources */,
 				582193E62DDB1C8F00FB3EC7 /* MarketDataManager.swift in Sources */,
 			);

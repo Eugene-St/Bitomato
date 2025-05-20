@@ -4,7 +4,7 @@ struct MarketMapper {
             MarketDisplayModel(
                 id: key,
                 pair: currency.pairName,
-                price: formatLargeNumber(currency.price),
+                price: currency.price,
                 priceUsd: "$\(formatUsd(currency.priceUsd))",
                 change: currency.change,
                 volume: "Vol \(formatVolume(currency.volume))",

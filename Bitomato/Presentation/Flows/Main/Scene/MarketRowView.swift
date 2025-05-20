@@ -27,7 +27,7 @@ struct MarketRowView: View {
             Spacer()
 
             VStack(alignment: .trailing, spacing: 4) {
-                Text(model.price)
+                Text(model.price.formatPriceWithSpaces())
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.interfaceBlack)
@@ -54,5 +54,5 @@ struct MarketRowView: View {
         change: "+2.89",
         volume: "Vol 288.35M",
         iconURL: nil
-    ))
+    )).padding(20)
 }

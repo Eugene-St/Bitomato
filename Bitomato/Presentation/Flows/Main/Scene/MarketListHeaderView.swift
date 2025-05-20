@@ -14,7 +14,7 @@ struct MarketListHeaderView: View {
             sortButton(title: "24H Change", field: .change)
         }
         .font(.caption)
-        .foregroundColor(.gray)
+        .foregroundColor(.interfaceGrey)
         .padding(.horizontal, 10)
     }
 
@@ -28,11 +28,11 @@ struct MarketListHeaderView: View {
                 VStack(spacing: 1) {
                     Image(systemName: "chevron.up")
                         .font(.system(size: 8, weight: .bold))
-                        .foregroundColor(currentSort == field && direction == .ascending ? .interfaceBlack : .gray)
+                        .foregroundColor(currentSort == field && direction == .ascending ? .interfaceBlack : .interfaceGrey)
 
                     Image(systemName: "chevron.down")
                         .font(.system(size: 8, weight: .bold))
-                        .foregroundColor(currentSort == field && direction == .descending ? .interfaceBlack : .gray)
+                        .foregroundColor(currentSort == field && direction == .descending ? .interfaceBlack : .interfaceGrey)
                 }
             }
         }

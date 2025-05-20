@@ -31,3 +31,13 @@ struct TagPickerView: View {
     }
 }
 
+#Preview {
+    StatefulPreviewWrapper("USDT") { selectedTag in
+        TagPickerView(
+            tags: ["USDT", "USDC", "DAI", "BUSD"],
+            selected: selectedTag.wrappedValue,
+            onSelect: { selectedTag.wrappedValue = $0 }
+        )
+    }
+}
+
